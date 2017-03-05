@@ -20,5 +20,10 @@
 	<% end %>    
 
     <%= yield %>
+
+    <h3>Magin mountain</h3>
+    <% if session[:source] %>
+      <p>You are a Sea lion visiting from <%= session[:source] %></p>
+    <% end %>
   </body>
 </html>
