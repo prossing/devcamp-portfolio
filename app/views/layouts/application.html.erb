@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= @page_title %></title>
-    <%= csrf_meta_tags %>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="keywords" content="<%= @seo_keywords %>" />
+  <title><%= @page_title %></title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <meta name="keywords" content="<%= @seo_keywords %>" />
 
-  <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= render "shared/nav", location: 'top' %>
+<body>
+ <div class="site-wrapper">
 
-    <%= login_helper %>
+  <div class="site-wrapper-inner">
 
-    <%= yield %>
+    <div class="cover-container">
 
-    <%= @copyright %>
+      <%= render "shared/application_nav" %>
 
-    <%= source_helper %>
-  </body>
+      <%= yield %>
+
+      <%= render "shared/application_footer" %>
+
+      <%= source_helper %>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
 </html>

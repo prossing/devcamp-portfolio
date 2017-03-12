@@ -56,4 +56,5 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.2'
 gem 'petergate', '~> 1.7'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
 
